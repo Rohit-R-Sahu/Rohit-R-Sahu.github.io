@@ -36,7 +36,7 @@ const skillCategories = [
     name: 'DevOps',
     skills: [
       { name: 'Docker', level: 82 },
-      { name: 'Kubernetes', level: 75 },
+      { name: 'Google Cloud', level: 75 },
       { name: 'CI/CD', level: 80 },
       { name: 'AWS', level: 78 },
       { name: 'Azure', level: 72 },

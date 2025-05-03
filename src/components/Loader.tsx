@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Terminal, Server, Database } from 'lucide-react';
+import { Code, Terminal, Server, Database, ArrowDownCircle } from 'lucide-react';
 
 const Loader = () => {
   const containerVariants = {
@@ -61,36 +61,30 @@ const Loader = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.div 
-          className="mb-8 relative"
-          variants={logoVariants}
-        >
+        <motion.div className="mb-8 relative" variants={logoVariants}>
           <div className="w-24 h-24 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 flex items-center justify-center">
-            <span className="text-white text-3xl font-bold">JS</span>
+            <span className="text-white text-3xl font-bold">RS</span>
           </div>
-          <motion.div 
+          <motion.div
             className="absolute -right-2 -bottom-2 bg-white dark:bg-gray-800 rounded-full shadow-lg p-2"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.3 }}
           >
-            <div className="w-6 h-6 rounded-full bg-accent-500 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">3+</span>
+            <div className="w-6 h-6 rounded-full bg-gray-500 flex items-center justify-center">
+              <span className="text-white text-xs font-bold"><ArrowDownCircle/></span>
             </div>
           </motion.div>
         </motion.div>
-        
-        <motion.h1 
-          className="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
+
+        <motion.h1
+          className="text-2xl font-bold mb-4 text-gray-900 dark:text-white text-center"
           variants={textVariants}
         >
-          Developer Portfolio
+          You are about to visit <br /> Rohit's Portfolio
         </motion.h1>
-        
-        <motion.div 
-          className="flex space-x-2"
-          variants={containerVariants}
-        >
+
+        <motion.div className="flex space-x-2" variants={containerVariants}>
           {icons.map((icon, index) => (
             <motion.div
               key={index}
@@ -102,8 +96,8 @@ const Loader = () => {
                   duration: 1.5,
                   repeat: Infinity,
                   delay: index * 0.2,
-                  ease: "easeInOut"
-                }
+                  ease: "easeInOut",
+                },
               }}
             >
               <span className="text-indigo-600 dark:text-indigo-400">
@@ -113,11 +107,11 @@ const Loader = () => {
           ))}
         </motion.div>
 
-        <motion.p 
+        <motion.p
           className="mt-8 text-gray-600 dark:text-gray-400"
           variants={textVariants}
         >
-          Loading experience...
+          Loading ...
         </motion.p>
       </motion.div>
     </div>

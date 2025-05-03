@@ -47,11 +47,11 @@ const Navbar = () => {
               transition={{ type: 'spring', stiffness: 500 }}
               className="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-500 flex items-center justify-center"
             >
-              <span className="text-white text-lg font-bold">JS</span>
+              <span className="text-white text-lg font-bold">RS</span>
             </motion.div>
             <div className="hidden sm:block">
               <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-                John Smith
+                Rohit Sahu
               </span>
             </div>
           </a>

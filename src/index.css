@@ -101,7 +101,8 @@
 
 /* Canvas positioning */
 .canvas-container {
-  @apply fixed top-0 left-0 w-full h-full -z-10;
+  @apply fixed top-0 left-0 w-full h-full;
+  z-index: -1;
 }
 
 /* Ensure images don't exceed container width */
@@ -109,3 +110,4 @@ img {
   max-width: 100%;
   height: auto;
 }
+
