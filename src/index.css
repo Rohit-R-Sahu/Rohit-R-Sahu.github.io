@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cursor-size: 24px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    cursor: none;
+  }
+
+  /* Hide the default cursor when using custom cursor */
+  * {
+    cursor: none !important;
+  }
+
+  /* Mobile devices - use default cursor */
+  @media (max-width: 768px) {
+    body, * {
+      cursor: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-center relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-1 bg-indigo-600 dark:bg-indigo-400 rounded;
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-title:hover::after {
+    transform: scaleX(1);
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-gray-900;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Canvas positioning */
+.canvas-container {
+  @apply fixed top-0 left-0 w-full h-full -z-10;
+}
+
+/* Ensure images don't exceed container width */
+img {
+  max-width: 100%;
+  height: auto;
+}
