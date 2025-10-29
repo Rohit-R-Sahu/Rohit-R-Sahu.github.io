@@ -184,7 +184,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Rohit-R-Sahu"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3 }}
@@ -193,7 +193,7 @@ const Hero = () => {
               <Github size={24} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rohit-roshan-sahu-"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -3 }}
@@ -202,7 +202,7 @@ const Hero = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1VU08GrKnd_JLZhXCLH1HzZFkXtECSVg8/view?usp=sharing"
               whileHover={{ y: -3 }}
               className="text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
